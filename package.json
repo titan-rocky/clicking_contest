@@ -4,13 +4,21 @@
   "main": "server.js",
   "scripts": {
     "test": "doyok",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
   },
-  "devDependencies": {},
-  "description": ""
+  "description": "How many times can you click per second ? Powered by JAVA JOESTAR",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titan-rocky/clicking_contest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/titan-rocky/clicking_contest/issues"
+  },
+  "homepage": "https://github.com/titan-rocky/clicking_contest#readme"
 }

@@ -1,7 +1,7 @@
 console.log("Fc");
 let count=0;
 let highscore=0;
-let defaulttime=60;
+let defaulttime=10;
 
 const button=document.getElementById("clickme");
 const res=document.getElementById("reset");
@@ -14,10 +14,11 @@ let time=defaulttime;
 timesec.textContent=time+"s";
 function timer()
 {
-	if (time)
+	if (time-1)
 	{time--;timesec.textContent=time+"s";}
 	else
 	{
+		timesec.textContent=0+"s"
 		if (highscore<count)
 		{
 			highscore=count;
@@ -47,6 +48,7 @@ function countg()
 	else
 	{
 		label.style.color="#e1d9cf"
+		label.style["animation"]=""
 	}
 	label.textContent="Count : "+count;
 	console.log(count);
@@ -63,28 +65,3 @@ function resettime()
 }
 
 res.addEventListener("click",resettime)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ggwp

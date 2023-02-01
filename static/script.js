@@ -1,6 +1,8 @@
 console.log("Fc");
 let count=0;
 let highscore=0;
+let defaulttime=60;
+
 const button=document.getElementById("clickme");
 const res=document.getElementById("reset");
 const label=document.getElementById("counter");
@@ -8,12 +10,12 @@ const timesec=document.getElementById("timesec");
 const hsclabel=document.getElementById("highsc");
 
 
-let time=60;
-timesec.textContent=time;
+let time=defaulttime;
+timesec.textContent=time+"s";
 function timer()
 {
 	if (time)
-	{time--;timesec.textContent=time;}
+	{time--;timesec.textContent=time+"s";}
 	else
 	{
 		if (highscore<count)
@@ -34,14 +36,13 @@ function countg()
 {
 	if (a==0)
 	{
-		alert("fuck")
 		timerrun=setInterval(timer,1000);
 		a=1;
 	}
 	count++;
 	if (count>highscore)
 	{
-		label.style.color="#70AFB8"
+		label.style["animation"]="firetext 0.5s linear 0s infinite alternate"
 	}
 	else
 	{
@@ -54,11 +55,36 @@ button.addEventListener("click",countg);
 
 function resettime()
 {
-	count=0;time=60;
+	count=0;time=defaulttime;
 	clearInterval(timerrun);
-	timesec.textContent=time;
+	timesec.textContent=time+"s";
 	button.disabled=false;
 	a=0;
 }
 
 res.addEventListener("click",resettime)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ggwp

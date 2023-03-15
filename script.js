@@ -1,7 +1,7 @@
 console.log("Fc");
 let count=0;
 let highscore=0;
-let defaulttime=10;
+let defaulttime=60;
 
 const button=document.getElementById("clickme");
 const res=document.getElementById("reset");

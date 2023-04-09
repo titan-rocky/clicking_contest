@@ -12,8 +12,15 @@ Frost
 
 :root
 {
-	--bgcol:#294654;
-	--fgcol:#AEC8D2;
+	--bgcol : #1c1c1c ;
+	--fgcol :#BFBDA6 ;
+        --red : #d38275 ;
+        --blue : #83a598 ;
+        --green : #a3c68f ;
+        --yellow : #edcc8c ;
+        --lightgray : #e2e1cf ;
+        --gray : #a3a3a3 ;
+
 }
 
 *
@@ -30,7 +37,11 @@ a
 
 body
 {
-	background-color:var(--bgcol);
+        /*background-image: url("../resources/w1.jpg");*/
+        background-color:var(--bgcol);
+        background-repeat:no-repeat;
+        width:100%;
+        background-size: cover;
 }
 
 
@@ -45,6 +56,12 @@ header
 	border-color: #002529;
 	border-width: 50px;
 
+}
+
+main{
+    display:block;        
+    height:100%;
+    bottom:0px;
 }
 
 div.logo
@@ -96,6 +113,11 @@ span#leaderb
 	margin-right: 50px;
 }
 
+div#counter{
+        text-align: center;
+        margin: -20px 0px 5px 0px;
+        font-size: 2em;
+}
 
 h1.title
 {
@@ -103,14 +125,14 @@ h1.title
 	color:var(--fgcol);
 	font-weight:bold;
 	font-family: monospace;
-	font-size:48px;
-	padding:20px;
-	margin:40px 20px 50px 20px;
+	font-size:3em;
+	padding:10px;
+	margin:40px 20px 10px 20px;
 	text-align:center;
 }
-div.main
+div.buttons
 {
-	margin:20px	;
+	margin:10px auto;
 	display:flex;
 	/*flex-direction: column;*/
 	align-items: center;
@@ -120,8 +142,17 @@ div.metadata
 {
 	display:flex;
 	flex-direction: row;
-	justify-content: space-between;
-	padding:30px;
+	justify-content: space-around;
+        flex-wrap: wrap;
+        text-align: center;
+	padding:40px;
+}
+
+div.conta
+{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
 }
 
 div.time
@@ -134,31 +165,46 @@ div.time
 
 @keyframes firetext
 {
-	from{color :var(--fgcol);}
-	to{color: #F9B14B;}
+	from{color :var(--blue);}
+	to{color: var(--red);}
 }
 
 button.butt
 {
-	border-radius: 5px;
+	border-radius: 15px;
 	border-color: var(--fgcol);
-	background-color: var(--bgcol);
-	color: var(--fgcol);
+	background-color: var(--fgcol);
+	color: var(--bgcol);
 	padding:20px;
 	margin:30px;
 	font-size:25px;
+        letter-spacing: 0.02px;
 }
 
 button.butt:disabled
 {
-	background-color: #083539;
+	border-color: var(--red);
+	background-color: var(--red);
+	color: var(--bgcol);    
+}
+
+@keyframes button_hover_anim
+{
+  from { background-color: var(--fgcol);color:var(--bgcol) }
+  to { background-color: var(--bgcol);color:var(--fgcol) }
+}
+
+button.butt:hover
+{
+        animation: button_hover_anim 0.3s ease ;
+        animation-fill-mode: forwards;
 }
 
 
-span.count
+.count
 {
 	font-size:20px;
-	padding:30px;
+	padding:10px;
 	color:#e1d9cf;	
 }
 

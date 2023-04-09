@@ -8,6 +8,7 @@ const res=document.getElementById("reset");
 const label=document.getElementById("counter");
 const timesec=document.getElementById("timesec");
 const hsclabel=document.getElementById("highsc");
+const cpslabel=document.getElementById("cps");
 
 
 let time=defaulttime;
@@ -22,7 +23,8 @@ function timer()
 		if (highscore<count)
 		{
 			highscore=count;
-			hsclabel.textContent="High Score : "+highscore;
+			hsclabel.textContent=highscore;
+                        cpslabel.textContent=count/defaulttime.toFixed(2) + " clicks/sec";
 		}
 
 		button.disabled=true;

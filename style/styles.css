@@ -12,7 +12,7 @@ Frost
 
 :root
 {
-	--bgcol : #1c1c1c ;
+	--bgcol : #191B1D ;
 	--fgcol :#BFBDA6 ;
         --red : #d38275 ;
         --blue : #83a598 ;
@@ -185,7 +185,7 @@ button.butt:disabled
 {
 	border-color: var(--red);
 	background-color: var(--red);
-	color: var(--bgcol);    
+	color: var(--bgcol);  
 }
 
 @keyframes button_hover_anim
@@ -205,9 +205,15 @@ button.butt:hover
 {
 	font-size:20px;
 	padding:10px;
-	color:#e1d9cf;	
+        color:var(--fgcol);
 }
 
+.countlabel
+{
+        color:var(--blue);
+        font-size:24px;
+	padding:10px;
+}
 span#timesec
 {
 	font-size:40px;
@@ -230,3 +236,9 @@ span#timesec
 	border: 1px solid #000000;
 
 }*/
+
+#auname
+{
+        color:var(--blue);
+        font-size: 18px;
+}

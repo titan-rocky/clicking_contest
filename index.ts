@@ -1,14 +1,14 @@
 console.log("Fc");
-let count=0;
-let highscore=0;
-let defaulttime=60;
+let count:number=0;
+let highscore:number=0;
+let defaulttime:number=15;
 
-const button=document.getElementById("clickme");
-const res=document.getElementById("reset");
-const label=document.getElementById("counter");
-const timesec=document.getElementById("timesec");
-const hsclabel=document.getElementById("highsc");
-const cpslabel=document.getElementById("cps");
+const button=document.getElementById("clickme")!
+const res=document.getElementById("reset")!
+const label=document.getElementById("counter")!
+const timesec=document.getElementById("timesec")!
+const hsclabel=document.getElementById("highsc")!
+const cpslabel=document.getElementById("cps")!
 
 
 let time=defaulttime;
@@ -24,7 +24,7 @@ function timer()
 		{
 			highscore=count;
 			hsclabel.textContent=highscore;
-                        cpslabel.textContent=count/defaulttime.toFixed(2) + " clicks/sec";
+                        cpslabel.textContent=(count/defaulttime).toFixed(2) + " clicks/sec";
 		}
 
 		button.disabled=true;
@@ -64,6 +64,7 @@ function resettime()
 	timesec.textContent=time+"s";
 	button.disabled=false;
 	a=0;
+	label.textContent="Count : "+count;
 }
 
 res.addEventListener("click",resettime)

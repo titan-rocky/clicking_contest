@@ -1,7 +1,14 @@
 :root
 {
-	--bgcol:#094044;
-	--fgcol:#f9744b;
+	--bgcol : #262e35 ;
+	--fgcol :#BFBDA6 ;
+        --red : #d38275 ;
+        --blue : #83a598 ;
+        --green : #a3c68f ;
+        --yellow : #edcc8c ;
+        --lightgray : #e2e1cf ;
+        --gray : #a3a3a3 ;
+
 }
 
 *
@@ -37,8 +44,8 @@ header
 h1.title
 {
 	text-align: center;
-	padding:59px;
-	font-size: 54px;
+	padding:29px;
+	font-size: 36px;
 	color:var(--fgcol);
 }
 
@@ -81,3 +88,73 @@ div.logo
 	border-color: #002529;
 	border-width: 50px;
 }
+
+.container
+{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        
+}
+
+main
+{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+}
+
+.container-element
+{
+        display:flex;
+        justify-content:space-between;
+        font-size:24px;
+        margin:10px;
+        color:var(--fgcol);
+}
+
+.ename{
+        width:500px;
+        text-align:center;
+
+}
+
+.escore{
+        width:300px;
+        text-align:center;
+
+}
+
+.container-element:first-child
+{
+        color:var(--yellow);
+        font-size:3.5rem;
+}
+
+.container-element:nth-child(2)
+{
+        color:var(--blue);
+        font-size:3em;
+}
+
+.self-element
+{
+        background-color:var(--fgcol);
+        color:var(--bgcol);
+        display:flex;
+        justify-content:space-between;
+        width:100%;
+        font-size:24px;
+        margin:10px;
+        padding:10px;
+}
+
+/*
+.container-element:last-child
+{
+        color:var(--bgcol);
+        background-color:var(--fgcol);
+}
+*/
+
+

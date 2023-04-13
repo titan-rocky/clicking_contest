@@ -1,5 +1,7 @@
 "use strict";
-console.log("Fc");
+//--------------- Prisma ----------------------
+//const prisma = require('./server')
+//----------------------------------------------
 let count = 0;
 let highscore = 0;
 let defaulttime = 15;

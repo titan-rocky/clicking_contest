@@ -3,10 +3,17 @@ const port = 8000;
 const http = require("http");
 var express=require("express");
 
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
+export {prisma} 
+
+
+
 var app=express();
 app.use(express.static('./'));
 app.use('/css',express.static('style/lbd.css'));
 app.use('/js',express.static('script.js'));
+
 
 
 app.get('/', function (request, response) {

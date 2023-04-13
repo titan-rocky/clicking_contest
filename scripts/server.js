@@ -1,8 +1,13 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.prisma = void 0;
 const host = 'localhost';
 const port = 8000;
 const http = require("http");
 var express = require("express");
+const client_1 = require("@prisma/client");
+const prisma = new client_1.PrismaClient();
+exports.prisma = prisma;
 var app = express();
 app.use(express.static('./'));
 app.use('/css', express.static('style/lbd.css'));

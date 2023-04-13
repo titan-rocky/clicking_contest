@@ -1,4 +1,0 @@
-datasource db {
-  provider = "supabase"
-  url      = env("DATABASE_URL")
-}

@@ -1,4 +1,8 @@
-console.log("Fc");
+
+//--------------- Prisma ----------------------
+//const prisma = require('./server')
+//----------------------------------------------
+
 let count:number=0;
 let highscore:number=0;
 let defaulttime:number=15;
